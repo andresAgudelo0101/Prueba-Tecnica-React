@@ -14,7 +14,6 @@ function Login() {
     const newData = { ...userData };
     newData[e.target.id] = e.target.value;
     setuserData(newData);
-    console.log(newData);
   };
 
   const onHandleSubmit = () => {

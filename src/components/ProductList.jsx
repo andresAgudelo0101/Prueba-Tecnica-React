@@ -15,54 +15,61 @@ function ProductList(props) {
   };
 
   return (
-    <ul className=" h-auto p-4 w-auto shadow-2xl rounded-lg text-lg md:text-xl text-gray-900 font-normal bg-gray-50">
+    <ul className=" h-auto p-6 w-auto shadow-2xl rounded-lg text-lg md:text-xl text-gray-900 font-normal bg-gray-50 flex flex-col justify-evenly">
       <li>
-        <b>serial:</b>
+        <b className=" text-zinc-900 font-medium">serial:</b>
         {props.serial}
       </li>
       <li>
-        <b>connection type:</b> {props.connection_type}
+        <b className=" text-zinc-900 font-medium">connection type:</b>{" "}
+        {props.connection_type}
       </li>
       <li>
-        <b>storage system:</b> {props.storage_system}
+        <b className=" text-zinc-900 font-medium">storage system:</b>{" "}
+        {props.storage_system}
       </li>
       <li>
-        <b>condition:</b> {props.condition}
+        <b className=" text-zinc-900 font-medium">condition:</b>{" "}
+        {props.condition}
       </li>
       <li>
-        <b>owner:</b> {props.owner}
+        <b className=" text-zinc-900 font-medium">owner:</b> {props.owner}
       </li>
       <li>
-        <b>location:</b> {props.location}
+        <b className=" text-zinc-900 font-medium">location:</b> {props.location}
       </li>
       <li>
-        <b>manufacturer:</b> {props.manufacturer}
+        <b className=" text-zinc-900 font-medium">manufacturer:</b>{" "}
+        {props.manufacturer}
       </li>
       <li>
-        <b>purchase:</b> {props.purchase}
+        <b className=" text-zinc-900 font-medium">purchase:</b> {props.purchase}
       </li>
       <li>
-        <b>i max:</b> {props.i_max}
+        <b className=" text-zinc-900 font-medium">i max:</b> {props.i_max}
       </li>
       <li>
-        <b>i b:</b> {props.i_b}
+        <b className=" text-zinc-900 font-medium">i b:</b> {props.i_b}
       </li>
       <li>
-        <b>i n:</b> {props.i_n}
+        <b className=" text-zinc-900 font-medium">i n:</b> {props.i_n}
       </li>
       <li>
-        <b>seals:</b> {props.seals}
+        <b className=" text-zinc-900 font-medium">seals:</b> {props.seals}
       </li>
       <li>
-        <b>id:</b> {props.id}
+        <b className=" text-zinc-900 font-medium">id:</b> {props.id}
       </li>
       <li>
-        <b>created at:</b> {props.created_at}
+        <b className=" text-zinc-900 font-medium ">created at:</b>{" "}
+        {props.created_at}
       </li>
-      <li className="h-14 ">
-        <b>updated at:</b> {props.updated_at}
+      <li>
+        <b className=" text-zinc-900  font-medium">updated at:</b>{" "}
+        {props.updated_at}
       </li>
-      <li className=" w-full flex justify-center py-2 gap-3">
+
+      <div className=" w-full flex justify-center py-2 gap-3">
         <button
           onClick={setDisplayBtnEdit}
           className=" px-6 py-2 rounded-md font-bold text-lg bg-transparent  text-violet-800 border-2 border-violet-800 hover:bg-violet-800 hover:shadow-2xl hover:shadow-violet-800 hover:text-white"
@@ -75,19 +82,21 @@ function ProductList(props) {
         >
           Delete
         </button>
-      </li>
-      {btnEdit && (
-        <UpdateProduct
-          productId={props.id}
-          setDisplayBtnEdit={setDisplayBtnEdit}
-        />
-      )}
-      {btnDelete && (
-        <DeleteProduct
-          productId={props.id}
-          setDisplayBtnDelete={setDisplayBtnDelete}
-        />
-      )}
+
+        {btnEdit && (
+          <UpdateProduct
+            productId={props.id}
+            setDisplayBtnEdit={setDisplayBtnEdit}
+          />
+        )}
+
+        {btnDelete && (
+          <DeleteProduct
+            productId={props.id}
+            setDisplayBtnDelete={setDisplayBtnDelete}
+          />
+        )}
+      </div>
     </ul>
   );
 }
