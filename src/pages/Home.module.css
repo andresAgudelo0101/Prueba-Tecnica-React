@@ -1,0 +1,26 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,330px);
+    width: 80%;
+    height: 100vh;
+    overflow-y: scroll;
+    gap: 10px;
+    justify-content: center;
+}
+
+.container::-webkit-scrollbar{
+    width: 12px;
+    height: 0px;
+}
+
+.container::-webkit-scrollbar-thumb{
+    background-color: #fb923c;
+    border-radius: 8px;
+}
+
+@media (max-width: 640px){
+    .container{
+        width: 100%;
+        grid-template-columns: repeat(auto-fill,100%);
+    }
+}
