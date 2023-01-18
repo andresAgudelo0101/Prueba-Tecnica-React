@@ -6,6 +6,7 @@
     overflow-y: scroll;
     gap: 10px;
     justify-content: center;
+    padding-bottom: 20px;
 }
 
 .container::-webkit-scrollbar{
