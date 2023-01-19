@@ -6,6 +6,10 @@
 - React Router Dom
 - Axios
 
+## Ejecución de proyecto en local (tener instalado node js versión 16 o superior)
+- instalar dependencias con: npm install
+- ejecutar proyecto: npm run dev
+
 ## inicio sesión
 ### solo necesitarás un usuario y contraseña las cuales son:
 - username: admin
